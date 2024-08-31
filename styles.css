@@ -1,0 +1,156 @@
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .scene {
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#a6d8ff, #fff, #fff);
+  }
+  
+  .dark .scene {
+    background: #222833;
+  }
+  
+  .sun {
+    position: absolute;
+    top: 5%; 
+    left: 35%; 
+    width: 8vw; 
+    height: 8vw; 
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 4vw #fff; 
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 0;
+  }
+  
+  .dark .sun {
+    left: 65%;
+    box-shadow: 0 0 0 #fff;
+  }
+  
+  .dark .sun::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 20%;
+    width: 100%;
+    height: 100%;
+    background: #222833;
+    border-radius: 50%;
+  }
+  
+  .bg {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height:390px; 
+    background: url(city.png);
+    background-size: auto 100%;
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    //animation: animateBg 15s linear infinite;
+  }
+
+  @media (min-width: 1250px) {
+    .sun {
+      width: 8vmax; 
+      height: 8vmax; 
+      top: 8vmax; 
+      
+    }
+    
+    .bg {
+      height: 65vmax;
+    }
+  }
+
+
+  @media (max-width: 1250px) {
+    .sun {
+      width: 7vmax; 
+      height: 7vmax; 
+      top: 7vmax; 
+      
+    }
+    
+    .bg {
+      height: 55vmax;
+    }
+  }
+  
+  @media (min-width: 1050px) {
+    .sun {
+      width: 6vmax; 
+      height: 6vmax; 
+      top: 6vmax;
+      
+
+    }
+    
+    .bg {
+      height: 28vmax;
+    }
+  }
+  
+  @media (max-width: 850px) {
+    .sun {
+      width: 5vmin; 
+      height: 5vmin; 
+      top: 5vmin; 
+    
+    }
+    
+    .bg {
+      height: 18vmax;
+      
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .sun {
+      width: 4vmin; 
+      height: 4vmin; 
+      top: 4vmin; 
+      
+    }
+    
+    .bg {
+      height: 10vmax;
+    
+    }
+  }
+
+  @media (max-width: 400px) {
+    .sun {
+      width: 3vmax; 
+      height: 3vmax; 
+      top: 3vmax; 
+      
+    }
+    
+    .bg {
+      height: 12vmax;
+    
+    }
+  }
+
+  
+  
+  @keyframes animateBg {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: 1000px;
+    }
+  }
+  
